@@ -114,18 +114,26 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-sans);font-siz
 const AM_URLS = {
   "Facing You": "https://music.apple.com/jp/album/facing-you/1443070781",
   "Solo Concerts: Bremen / Lausanne": "https://music.apple.com/jp/album/solo-concerts-bremen-lausanne-live/1863144743",
+  "The K\u00f6ln Concert": "https://music.apple.com/jp/album/the-k%C3%B6ln-concert-live/1440840566",
   "Staircase": "https://music.apple.com/jp/album/staircase/1445894213",
   "Sun Bear Concerts": "https://music.apple.com/jp/album/sun-bear-concerts-live/1576461131",
+  "Concerts: Bregenz  / M\u00fcnchen": "https://music.apple.com/jp/album/concerts-bregenz-m%C3%BCnchen/1443191734",
   "Dark Intervals": "https://music.apple.com/jp/album/dark-intervals/1443486266",
   "Paris Concert": "https://music.apple.com/jp/album/paris-concert/1443559079",
   "The Vienna Concert": "https://music.apple.com/jp/album/vienna-concert/1444195265",
   "A Multitude of Angels": "https://music.apple.com/jp/album/a-multitude-of-angels-live/1440866605",
   "La Scala": "https://music.apple.com/jp/album/la-scala-live/1442229550",
+  "The Melody at Night, with You": "https://music.apple.com/jp/album/the-melody-at-night-with-you/1440930475",
+  "Radiance": "https://music.apple.com/jp/album/radiance/1452849990",
+  "The Carnegie Hall Concert": "https://music.apple.com/jp/album/the-carnegie-hall-concert/1452852846",
   "La Fenice": "https://music.apple.com/jp/album/la-fenice-live-at-teatro-la-fenice-venice-2006/1435138629",
   "Paris / London: Testament": "https://music.apple.com/jp/album/paris-london-testament-live/1442992688",
   "Rio": "https://music.apple.com/jp/album/rio/1443535222",
   "Creation": "https://music.apple.com/jp/album/creation-live/1474240882",
-  "Budapest Concert": "https://music.apple.com/jp/album/budapest-concert-live/1528317085"
+  "Budapest Concert": "https://music.apple.com/jp/album/budapest-concert-live/1528317085",
+  "Bordeaux Concert": "https://music.apple.com/jp/album/bordeaux-concert-live/1635568978",
+  "Munich 2016": "https://music.apple.com/jp/album/munich-2016-live/1480824440",
+  "New Vienna": "https://music.apple.com/jp/album/new-vienna-live-at-musikverein-2016/1806357973"
 };
 
 const AM_LOGO = `data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkFydHdvcmsiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIzNjFweCIgaGVpZ2h0PSIzNjFweCIgdmlld0JveD0iMCAwIDM2MSAzNjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM2MSAzNjE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbDp1cmwoI1NWR0lEXzFfKTt9Cgkuc3Qxe2ZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU+CjxnIGlkPSJMYXllcl81Ij4KPC9nPgo8Zz4KCTxsaW5lYXJHcmFkaWVudCBpZD0iU1ZHSURfMV8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMTgwIiB5MT0iMzU4LjYwNDciIHgyPSIxODAiIHkyPSI3Ljc1ODYiPgoJCTxzdG9wICBvZmZzZXQ9IjAiIHN0eWxlPSJzdG9wLWNvbG9yOiNGQTIzM0IiLz4KCQk8c3RvcCAgb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjojRkI1Qzc0Ii8+Cgk8L2xpbmVhckdyYWRpZW50PgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTM2MCwxMTIuNjFjMC00LjMsMC04LjYtMC4wMi0xMi45Yy0wLjAyLTMuNjItMC4wNi03LjI0LTAuMTYtMTAuODZjLTAuMjEtNy44OS0wLjY4LTE1Ljg0LTIuMDgtMjMuNjQKCQljLTEuNDItNy45Mi0zLjc1LTE1LjI5LTcuNDEtMjIuNDljLTMuNi03LjA3LTguMy0xMy41My0xMy45MS0xOS4xNGMtNS42MS01LjYxLTEyLjA4LTEwLjMxLTE5LjE1LTEzLjkxCgkJYy03LjE5LTMuNjYtMTQuNTYtNS45OC0yMi40Ny03LjQxYy03LjgtMS40LTE1Ljc2LTEuODctMjMuNjUtMi4wOGMtMy42Mi0wLjEtNy4yNC0wLjE0LTEwLjg2LTAuMTZDMjU1Ljk5LDAsMjUxLjY5LDAsMjQ3LjM5LDAKCQlIMTEyLjYxYy00LjMsMC04LjYsMC0xMi45LDAuMDJjLTMuNjIsMC4wMi03LjI0LDAuMDYtMTAuODYsMC4xNkM4MC45NiwwLjQsNzMsMC44Niw2NS4yLDIuMjdjLTcuOTIsMS40Mi0xNS4yOCwzLjc1LTIyLjQ3LDcuNDEKCQljLTcuMDcsMy42LTEzLjU0LDguMy0xOS4xNSwxMy45MWMtNS42MSw1LjYxLTEwLjMxLDEyLjA3LTEzLjkxLDE5LjE0Yy0zLjY2LDcuMi01Ljk5LDE0LjU3LTcuNDEsMjIuNDkKCQljLTEuNCw3LjgtMS44NywxNS43Ni0yLjA4LDIzLjY0Yy0wLjEsMy42Mi0wLjE0LDcuMjQtMC4xNiwxMC44NkMwLDEwNC4wMSwwLDEwOC4zMSwwLDExMi42MXYxMzQuNzdjMCw0LjMsMCw4LjYsMC4wMiwxMi45CgkJYzAuMDIsMy42MiwwLjA2LDcuMjQsMC4xNiwxMC44NmMwLjIxLDcuODksMC42OCwxNS44NCwyLjA4LDIzLjY0YzEuNDIsNy45MiwzLjc1LDE1LjI5LDcuNDEsMjIuNDljMy42LDcuMDcsOC4zLDEzLjUzLDEzLjkxLDE5LjE0CgkJYzUuNjEsNS42MSwxMi4wOCwxMC4zMSwxOS4xNSwxMy45MWM3LjE5LDMuNjYsMTQuNTYsNS45OCwyMi40Nyw3LjQxYzcuOCwxLjQsMTUuNzYsMS44NywyMy42NSwyLjA4YzMuNjIsMC4xLDcuMjQsMC4xNCwxMC44NiwwLjE2CgkJYzQuMywwLjAzLDguNiwwLjAyLDEyLjksMC4wMmgxMzQuNzdjNC4zLDAsOC42LDAsMTIuOS0wLjAyYzMuNjItMC4wMiw3LjI0LTAuMDYsMTAuODYtMC4xNmM3Ljg5LTAuMjEsMTUuODUtMC42OCwyMy42NS0yLjA4CgkJYzcuOTItMS40MiwxNS4yOC0zLjc1LDIyLjQ3LTcuNDFjNy4wNy0zLjYsMTMuNTQtOC4zLDE5LjE1LTEzLjkxYzUuNjEtNS42MSwxMC4zMS0xMi4wNywxMy45MS0xOS4xNAoJCWMzLjY2LTcuMiw1Ljk5LTE0LjU3LDcuNDEtMjIuNDljMS40LTcuOCwxLjg3LTE1Ljc2LDIuMDgtMjMuNjRjMC4xLTMuNjIsMC4xNC03LjI0LDAuMTYtMTAuODZjMC4wMy00LjMsMC4wMi04LjYsMC4wMi0xMi45VjExMi42MQoJCXoiLz4KPC9nPgo8ZyBpZD0iR2x5cGhfMl8iPgoJPGc+CgkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTI1NC41LDU1Yy0wLjg3LDAuMDgtOC42LDEuNDUtOS41MywxLjY0bC0xMDcsMjEuNTlsLTAuMDQsMC4wMWMtMi43OSwwLjU5LTQuOTgsMS41OC02LjY3LDMKCQkJYy0yLjA0LDEuNzEtMy4xNyw0LjEzLTMuNiw2Ljk1Yy0wLjA5LDAuNi0wLjI0LDEuODItMC4yNCwzLjYyYzAsMCwwLDEwOS4zMiwwLDEzMy45MmMwLDMuMTMtMC4yNSw2LjE3LTIuMzcsOC43NgoJCQljLTIuMTIsMi41OS00Ljc0LDMuMzctNy44MSwzLjk5Yy0yLjMzLDAuNDctNC42NiwwLjk0LTYuOTksMS40MWMtOC44NCwxLjc4LTE0LjU5LDIuOTktMTkuOCw1LjAxCgkJCWMtNC45OCwxLjkzLTguNzEsNC4zOS0xMS42OCw3LjUxYy01Ljg5LDYuMTctOC4yOCwxNC41NC03LjQ2LDIyLjM4YzAuNyw2LjY5LDMuNzEsMTMuMDksOC44OCwxNy44MgoJCQljMy40OSwzLjIsNy44NSw1LjYzLDEyLjk5LDYuNjZjNS4zMywxLjA3LDExLjAxLDAuNywxOS4zMS0wLjk4YzQuNDItMC44OSw4LjU2LTIuMjgsMTIuNS00LjYxYzMuOS0yLjMsNy4yNC01LjM3LDkuODUtOS4xMQoJCQljMi42Mi0zLjc1LDQuMzEtNy45Miw1LjI0LTEyLjM1YzAuOTYtNC41NywxLjE5LTguNywxLjE5LTEzLjI2bDAtMTE2LjE1YzAtNi4yMiwxLjc2LTcuODYsNi43OC05LjA4YzAsMCw4OC45NC0xNy45NCw5My4wOS0xOC43NQoJCQljNS43OS0xLjExLDguNTIsMC41NCw4LjUyLDYuNjFsMCw3OS4yOWMwLDMuMTQtMC4wMyw2LjMyLTIuMTcsOC45MmMtMi4xMiwyLjU5LTQuNzQsMy4zNy03LjgxLDMuOTkKCQkJYy0yLjMzLDAuNDctNC42NiwwLjk0LTYuOTksMS40MWMtOC44NCwxLjc4LTE0LjU5LDIuOTktMTkuOCw1LjAxYy00Ljk4LDEuOTMtOC43MSw0LjM5LTExLjY4LDcuNTEKCQkJYy01Ljg5LDYuMTctOC40OSwxNC41NC03LjY3LDIyLjM4YzAuNyw2LjY5LDMuOTIsMTMuMDksOS4wOSwxNy44MmMzLjQ5LDMuMiw3Ljg1LDUuNTYsMTIuOTksNi42YzUuMzMsMS4wNywxMS4wMSwwLjY5LDE5LjMxLTAuOTgKCQkJYzQuNDItMC44OSw4LjU2LTIuMjIsMTIuNS00LjU1YzMuOS0yLjMsNy4yNC01LjM3LDkuODUtOS4xMWMyLjYyLTMuNzUsNC4zMS03LjkyLDUuMjQtMTIuMzVjMC45Ni00LjU3LDEtOC43LDEtMTMuMjZWNjQuNDYKCQkJQzI2My41NCw1OC4zLDI2MC4yOSw1NC41LDI1NC41LDU1eiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=`;
@@ -189,34 +197,18 @@ document.addEventListener('keydown', function(e) {
 </script>
 
 <script>
-async function loadAppleMusicLinks() {
+function loadAppleMusicLinks() {
   const badges = document.querySelectorAll('.am-badge');
-  for (const badge of badges) {
+  badges.forEach(badge => {
     const album = badge.dataset.album;
-    let storeUrl = AM_URLS[album] || null;
-
-    // 手動URLがなければAPIで取得
-    if (!storeUrl) {
-      let cleanName = album.replace(/[:\/,]/g, ' ').replace(/\s+/g, ' ').trim();
-      const q = encodeURIComponent('Keith Jarrett ' + cleanName);
-      const url = `https://itunes.apple.com/search?term=${q}&media=music&entity=album&limit=10&country=jp`;
-      try {
-        const res = await fetch(url);
-        const data = await res.json();
-        if (data.results && data.results.length > 0) {
-          storeUrl = data.results[0].collectionViewUrl;
-        }
-      } catch(e) {}
-      await new Promise(r => setTimeout(r, 80));
-    }
-
+    const storeUrl = AM_URLS[album];
     if (storeUrl) {
       badge.innerHTML = `<a class="am-link" href="${storeUrl}" target="_blank" rel="noopener">
         <img class="am-logo" src="${AM_LOGO}" alt="Apple Music">
         <span class="am-text">Apple Music</span>
       </a>`;
     }
-  }
+  });
 }
 loadAppleMusicLinks();
 </script>
