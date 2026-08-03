@@ -85,8 +85,8 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-sans);font-siz
 }
 .am-link:hover { opacity: 1; }
 .am-logo {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 4px;
   object-fit: contain;
 }
@@ -203,9 +203,8 @@ function loadAppleMusicLinks() {
     const album = badge.dataset.album;
     const storeUrl = AM_URLS[album];
     if (storeUrl) {
-      badge.innerHTML = `<a class="am-link" href="${storeUrl}" target="_blank" rel="noopener">
+      badge.innerHTML = `<a class="am-link" href="${storeUrl}" target="_blank" rel="noopener" title="Apple Music">
         <img class="am-logo" src="${AM_LOGO}" alt="Apple Music">
-        <span class="am-text">Apple Music</span>
       </a>`;
     }
   });
